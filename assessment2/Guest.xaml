@@ -1,0 +1,18 @@
+﻿<Window x:Class="assessment2.Guest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Guest" Height="178.983" Width="298.983">
+    <Grid>
+        <Button x:Name="btnGet" Content="Get" HorizontalAlignment="Left" Height="30" Margin="18,103,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="30" Margin="83,103,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btnAmend" Content="Amend" HorizontalAlignment="Left" Height="30" Margin="148,103,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="30" Margin="213,103,0,0" VerticalAlignment="Top" Width="60"/>
+        <TextBlock x:Name="passNumBlock" HorizontalAlignment="Left" Height="24" Margin="10,9,0,0" TextWrapping="Wrap" Text="Passport Number" VerticalAlignment="Top" Width="109"/>
+        <TextBlock x:Name="guestNameBlock" HorizontalAlignment="Left" Height="24" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Text="Name"/>
+        <TextBlock x:Name="ageBlock" HorizontalAlignment="Left" Height="23" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Text="Age"/>
+        <TextBox x:Name="tbPassNum" HorizontalAlignment="Left" Height="24" Margin="144,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="tbGuestName" HorizontalAlignment="Left" Height="24" Margin="144,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+        <TextBox x:Name="tbAge" HorizontalAlignment="Left" Height="24" Margin="144,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129"/>
+
+    </Grid>
+</Window>

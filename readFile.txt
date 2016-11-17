@@ -1,0 +1,8 @@
+AD	DD	BRN CID EOL
+Name	PN	Age CID EOL
+Name	Address	CRN BID* EOL	*0..n
+
+11/12/2016 14/12/2016 1 %
+13/11/2015 15/11/2015 2 %
+John Smith P455P0RT 54 1 %
+John Mum 123 Edinburgh Street 1 1 2%
