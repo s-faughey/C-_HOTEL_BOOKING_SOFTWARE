@@ -8,9 +8,10 @@ namespace assessment2
 {
     class BookingFactory
     {
-        public void createBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
+        public Booking createBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire, int customerReferenceNumber)
         {
-            Booking booking = new Booking(arrivalDate, departureDate, bookingReferenceNumber, eveningMeals, breakfast, carHire);
+            Booking booking = new Booking(arrivalDate, departureDate, bookingReferenceNumber, eveningMeals, breakfast, carHire, customerReferenceNumber);
+            return booking;
         }
 
         private void deleteBooking()

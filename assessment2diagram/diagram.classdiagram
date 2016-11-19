@@ -268,6 +268,40 @@
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6ecfb7d5-99e7-43c0-9e7f-3639d694f15c" name="SerializeData" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="82db668a-7766-4d4b-a0d1-a0f10e0d6afa" />
+        <targetEnds>
+          <association Id="a554ae61-2aad-485c-b967-a04073426a55" isDerived="false" sourceEndRoleName="SerializeData" targetEndRoleName="Facade" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f0a6e9e5-b105-49b4-83ef-fae39ab7310f" LastKnownName="Facade" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2beeffcb-23db-4974-982c-8cc6f99cdd3e" name="SerializeData" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bbfa79fd-0580-4a80-9c93-27a99b64d83f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec881c14-9387-433c-b89b-b47a0714bf7b" name="Facade" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c9b088e7-5dcd-4407-b88f-59f3688f7497" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42de4079-33e2-4732-bee6-e08ad839f1e9" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="81bb7b06-7882-41bd-8d1a-68352440a3d5" name="SerializeObject" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="992319f3-514d-4b4b-a0b1-50000f6a6594" />
+          </operation>
+          <operation Id="eb300cba-04f3-4023-9590-a697394df2d9" name="DeserializeObjects" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="866c82ff-1d22-48c0-9b87-fcaa526170ef" />
+          </operation>
+          <operation Id="1a5b3e97-7b1e-443b-b767-2f9c31a3fb5a" name="CloseStream" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5c1f5ae0-910c-407e-b5e4-0c44346553ee" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="40a82a68-4582-474b-b4c2-1040e3eabb4f" name="assessment2diagram">
     <elementDefinition Id="8cb1ccf6-1607-4bb9-b7df-8209c0e18ea3" />

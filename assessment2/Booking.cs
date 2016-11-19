@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace assessment2
 {
+    [Serializable]
     class Booking
     {
         private string arrivalDate;
@@ -14,15 +15,48 @@ namespace assessment2
         private bool eveningMeals;
         private bool breakfast;
         private bool carHire;
-        public Booking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
+        private int customerReferenceNumber;
+        public Booking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire, int customerReferenceNumber)
         {
-            arrivalDate = this.arrivalDate;
-            bookingReferenceNumber = this.bookingReferenceNumber;
-            departureDate = this.departureDate;
-            eveningMeals = this.eveningMeals;
-            breakfast = this.breakfast;
-            carHire = this.carHire;
+            this.arrivalDate = arrivalDate;
+            this.bookingReferenceNumber = bookingReferenceNumber;
+            this.departureDate = departureDate;
+            this.eveningMeals = eveningMeals;
+            this.breakfast = breakfast;
+            this.carHire = carHire;
+            this.customerReferenceNumber = customerReferenceNumber;
         }
 
+        public int BookingReferenceNumber
+        {
+            get
+            {
+                return this.bookingReferenceNumber;
+            }
+            set
+            {
+                if (value == null) 
+                {
+                    throw new Exception("This is wrong");
+                }
+                this.bookingReferenceNumber = value;
+            }
+        }
+
+        public int CustomerReferenceNumber
+        {
+            get
+            {
+                return this.customerReferenceNumber;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    throw new Exception("This is wrong");
+                }
+                this.bookingReferenceNumber = value;
+            }
+        }
     }
 }

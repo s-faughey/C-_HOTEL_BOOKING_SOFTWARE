@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace assessment2
 {
+    [Serializable]
     class Guest
     {
         private int age;
@@ -13,9 +14,25 @@ namespace assessment2
         private int passportNumber;
         public Guest(int age, string name, int passportNumber)
         {
-            age = this.age;
-            name = this.name;
-            passportNumber = this.passportNumber;
+            this.age = age;
+            this.name = name;
+            this.passportNumber = passportNumber;
+        }
+
+        public int PassportNumber
+        {
+            get
+            {
+                return this.passportNumber;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    throw new Exception("This is wrong");
+                }
+                this.passportNumber = value;
+            }
         }
     }
 }

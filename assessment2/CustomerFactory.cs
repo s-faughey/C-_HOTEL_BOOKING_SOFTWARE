@@ -8,9 +8,10 @@ namespace assessment2
 {
     class CustomerFactory
     {
-        public void createCustomer(string name, string address, int customerReferenceNumber)
+        public Customer createCustomer(string name, string address, int customerReferenceNumber)
         {
             Customer customer = new Customer(name, address, customerReferenceNumber);
+            return customer;
         }
 
         public void deleteCustomer()

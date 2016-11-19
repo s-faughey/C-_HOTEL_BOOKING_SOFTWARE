@@ -586,6 +586,82 @@
         </targetEnds>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="82db668a-7766-4d4b-a0d1-a0f10e0d6afa"
+        name="SerializeData"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="42de4079-33e2-4732-bee6-e08ad839f1e9"
+            isDerived="false"
+            sourceEndRoleName="SerializeData"
+            targetEndRoleName="Facade"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="8e66ae13-d2c7-43eb-9bbc-f093c09833c6"
+              LastKnownName="Facade"
+              LastKnownLocation="assessment2diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bbfa79fd-0580-4a80-9c93-27a99b64d83f"
+                  name="SerializeData"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9b088e7-5dcd-4407-b88f-59f3688f7497"
+                  name="Facade"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="992319f3-514d-4b4b-a0b1-50000f6a6594"
+            name="SerializeObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="866c82ff-1d22-48c0-9b87-fcaa526170ef"
+            name="DeserializeObjects"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5c1f5ae0-910c-407e-b5e4-0c44346553ee"
+            name="CloseStream"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

@@ -8,9 +8,10 @@ namespace assessment2
 {
     class GuestFactory
     {
-        public void createGuest(string guestName, int passportNumber, int age)
+        public Guest createGuest(string guestName, int passportNumber, int age, int bookingReferenceNumber)
         {
             Guest guest = new Guest(age, guestName, passportNumber);
+            return guest;
         }
 
         private void deleteGuest()
