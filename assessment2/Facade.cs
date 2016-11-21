@@ -12,35 +12,28 @@ namespace assessment2
         BookingFactory bookingFactory = new BookingFactory();
         GuestFactory guestFactory = new GuestFactory();
         SerializeData serializer = new SerializeData("testBinaryFile.txt");
-        public void createCustomer(string name, string address, int customerReferenceNumber)
+        public void createCustomer(string name, string address)
         {
-            serializer.SerializeObject(customerFactory.createCustomer(name, address, customerReferenceNumber));
-            serializer.closeStream();
+            int customerReferenceNumber = serializer.findFirstAvailableNumber("customer");
+            serializer.serializeObject(customerFactory.createCustomer(name, address, customerReferenceNumber));
         }
 
-        public void createBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire, int customerReferenceNumber)
+        public void createBooking(string arrivalDate, string departureDate, bool eveningMeals, bool breakfast, bool carHire)
         {
-            serializer.SerializeObject(bookingFactory.createBooking(
-                arrivalDate, departureDate, bookingReferenceNumber, eveningMeals, breakfast, carHire, customerReferenceNumber));
+            serializer.serializeObject(bookingFactory.createBooking(
+                arrivalDate, departureDate, serializer.findFirstAvailableNumber("booking"), eveningMeals, breakfast, carHire));
         }
 
-        public void createGuest(string guestName, int passportNumber, int age, int bookingReferenceNumber)
+        public void createGuest(string guestName, int passportNumber, int age)
         {
-            serializer.SerializeObject(guestFactory.createGuest(guestName, passportNumber, age, bookingReferenceNumber));
+            serializer.serializeObject(guestFactory.createGuest(guestName, passportNumber, age));
         }
 
-        public Customer readCustomer(int customerReferenceNumber, int bookingReferenceNumber)
+        public Customer readCustomer(int customerReferenceNumber)
         {
             Customer customer = null;
-            if (customerReferenceNumber == 0) {
-                if (bookingReferenceNumber != 0)
-                {
-                    Booking booking = (Booking)serializer.DeserializeObjects(bookingReferenceNumber);
-                    customer = (Customer)serializer.DeserializeObjects(booking.CustomerReferenceNumber);
-                }
-            }
-            else if (customerReferenceNumber != 0) {
-                customer = (Customer) serializer.DeserializeObjects(customerReferenceNumber);
+            if (customerReferenceNumber != 0) {
+                customer = (Customer) serializer.deserializeObject(customerReferenceNumber, "customer");
             }
             return customer;
         }
@@ -48,9 +41,9 @@ namespace assessment2
         public Booking readBooking(int bookingReferenceNumber)
         {
             Booking booking = null;
-            if (bookingReferenceNumber != null)
+            if (bookingReferenceNumber != 0)
             {
-                booking = (Booking)serializer.DeserializeObjects(bookingReferenceNumber);
+                booking = (Booking)serializer.deserializeObject(bookingReferenceNumber, "booking");
             }
             return booking;
         }
@@ -58,25 +51,21 @@ namespace assessment2
         public Guest readGuest(int passportNumber)
         {
             Guest guest = null;
-            if (passportNumber != null) {
-                guest = (Guest)serializer.DeserializeObjects(passportNumber);
+            if (passportNumber != 0) {
+                guest = (Guest)serializer.deserializeObject(passportNumber, "guest");
             }
             return guest;
         }
 
-        public void amendFile()
+        public void deleteObject(int objectIdentifier, string objectType)
         {
-
+            serializer.deleteObject(objectIdentifier, objectType);
         }
 
         public void writeToFile(Object item)
         {
-            serializer.SerializeObject(item);
+            serializer.serializeObject(item);
             serializer.closeStream();
-        }
-        public Object readObject(int objectIdentifier)
-        {
-            return serializer.DeserializeObjects(objectIdentifier);
         }
     }
 }

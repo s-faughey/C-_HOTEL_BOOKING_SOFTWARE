@@ -26,7 +26,7 @@
         <Button x:Name="btnAddBooking" Grid.ColumnSpan="2" Content="Add Booking" HorizontalAlignment="Left" Height="30" Margin="95,428,0,0" VerticalAlignment="Top" Width="80" Click="btnAddBooking_Click"/>
         <Button x:Name="btnAddGuest" Grid.ColumnSpan="2" Content="Add Guest" HorizontalAlignment="Left" Height="30" Margin="180,428,0,0" VerticalAlignment="Top" Width="80" Click="btnAddGuest_Click"/>
         <Button x:Name="btnInvoice" Grid.ColumnSpan="2" Content="Invoice" HorizontalAlignment="Left" Height="30" Margin="265,428,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnDeleteCustomer" Grid.ColumnSpan="2" Content="Delete Customer" HorizontalAlignment="Left" Height="30" Margin="350,428,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btnDeleteCustomer" Grid.ColumnSpan="2" Content="Delete Customer" HorizontalAlignment="Left" Height="30" Margin="350,428,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteCustomer_Click"/>
         <Button x:Name="btnDeleteBooking" Grid.ColumnSpan="2" Content="Delete Booking" HorizontalAlignment="Left" Height="30" Margin="435,428,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnAmendCustomer" Grid.ColumnSpan="2" Content="Amend Customer" HorizontalAlignment="Left" Height="30" Margin="10,463,0,0" VerticalAlignment="Top" Width="80"/>
         <Button x:Name="btnAmendGuest" Grid.ColumnSpan="2" Content="Amend Guest" HorizontalAlignment="Left" Height="30" Margin="95,463,0,0" VerticalAlignment="Top" Width="80"/>
@@ -41,8 +41,8 @@
         <TextBox x:Name="tbAge" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="180,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbBookingReferenceNumber" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="21" Margin="180,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <Button x:Name="btnReadCustomer" Grid.ColumnSpan="2" Content="Read Customer" HorizontalAlignment="Left" Height="30" Margin="265,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadCustomer_Click"/>
-        <Button x:Name="btnReadGuest" Grid.ColumnSpan="2" Content="Read Guest" HorizontalAlignment="Left" Height="30" Margin="350,463,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnReadBooking" Grid.ColumnSpan="2" Content="Read Booking" HorizontalAlignment="Left" Height="30" Margin="435,463,0,0" VerticalAlignment="Top" Width="80"/>
+        <Button x:Name="btnReadGuest" Grid.ColumnSpan="2" Content="Read Guest" HorizontalAlignment="Left" Height="30" Margin="350,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadGuest_Click"/>
+        <Button x:Name="btnReadBooking" Grid.ColumnSpan="2" Content="Read Booking" HorizontalAlignment="Left" Height="30" Margin="435,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadBooking_Click"/>
 
     </Grid>
 </Window>

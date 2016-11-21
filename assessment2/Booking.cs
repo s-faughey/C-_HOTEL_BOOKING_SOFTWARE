@@ -15,8 +15,7 @@ namespace assessment2
         private bool eveningMeals;
         private bool breakfast;
         private bool carHire;
-        private int customerReferenceNumber;
-        public Booking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire, int customerReferenceNumber)
+        public Booking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
         {
             this.arrivalDate = arrivalDate;
             this.bookingReferenceNumber = bookingReferenceNumber;
@@ -24,7 +23,6 @@ namespace assessment2
             this.eveningMeals = eveningMeals;
             this.breakfast = breakfast;
             this.carHire = carHire;
-            this.customerReferenceNumber = customerReferenceNumber;
         }
 
         public int BookingReferenceNumber
@@ -43,19 +41,81 @@ namespace assessment2
             }
         }
 
-        public int CustomerReferenceNumber
+    
+        public string ArrivalDate
         {
             get
             {
-                return this.customerReferenceNumber;
+                return this.arrivalDate;
             }
             set
             {
                 if (value == null)
                 {
+                    throw new Exception("This is wrong!");
+                }
+                this.arrivalDate = value;
+            }
+        }
+
+        public string DepartureDate
+        {
+            get
+            {
+                return this.departureDate;
+            }
+            set
+            {
+                if (value == null) 
+                {
                     throw new Exception("This is wrong");
                 }
-                this.bookingReferenceNumber = value;
+                this.arrivalDate = value;
+            }
+        }
+
+        public bool Breakfast
+        {
+            get
+            {
+                return this.breakfast;
+            }
+            set
+            {
+                if (value == null) {
+                    throw new Exception("this is wrong");
+                }
+                this.breakfast = value;
+            }
+        }
+
+        public bool CarHire
+        {
+            get
+            {
+                return this.carHire;
+            }
+            set
+            {
+                if (value == null) {
+                    throw new Exception("wrnog");
+                }
+                this.carHire = value;
+            }
+        }
+
+        public bool EveningMeals
+        {
+            get
+            {
+                return this.eveningMeals;
+            }
+            set
+            {
+                if (value == null) {
+                    throw new Exception("wrong");
+                }
+                this.carHire = value;
             }
         }
     }

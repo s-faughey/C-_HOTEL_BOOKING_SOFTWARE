@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,63 +12,174 @@ namespace assessment2
 {
     class SerializeData
     {
-        Stream stream = null;
+        FileStream stream = null;
         BinaryFormatter bformatter = null;
         String txtFileName = "";
+        ArrayList objectArray = new ArrayList();
         public SerializeData(String fileName)
         {
             txtFileName = fileName;
-            stream = File.Open(txtFileName, FileMode.Create);
             bformatter = new BinaryFormatter();
-            closeStream();
         }
 
-        public void SerializeObject(Object objectToSerialize)
+        private void createFile()
         {
-            stream = File.Open(txtFileName, FileMode.Append);
-            bformatter.Serialize(stream, objectToSerialize);
-            closeStream();
+            if (!File.Exists(txtFileName)) {
+                stream = File.Open(txtFileName, FileMode.Create);
+                closeStream();
+            }
         }
 
-        public Object DeserializeObjects(int objectIdentifier)
+
+        public void serializeObject(Object objectToSerialize)
         {
-            Object objectFromStream = null;
-            stream = File.Open(txtFileName, FileMode.Open);
+            createFile();
+            objectArray = deserializeArray();
+            objectArray.Add(objectToSerialize);
+            using (var stream = File.OpenWrite(txtFileName))
+            {
+                bformatter.Serialize(stream, objectArray);
+            }
+        }
+
+        public int findFirstAvailableNumber(string objectToCount)
+        {
+            int counter = 0;
+            deserializeArray();
+            for (int i = 0; i < objectArray.Count; i++ )
+            {
+                if (objectToCount == "customer") {
+                    if (objectArray[i] is Customer)
+                    {
+                        counter++;
+                    }
+                }
+
+                if (objectToCount == "booking")
+                {
+                    if (objectArray[i] is Booking)
+                    {
+                        counter++;
+                    }
+                }
+
+                if (objectToCount == "guest") {
+                    if (objectArray[i] is Guest) {
+                        counter++;
+                    }
+                }
+            }
+            return counter+1;
+        }
+
+        public ArrayList deserializeArray()
+        {
+            createFile();
+            var list = new ArrayList();
+            using (var stream = File.OpenRead(txtFileName))
+            {
+                if (stream.Length != 0) {
+                    list = (ArrayList)bformatter.Deserialize(stream);
+                }
+            }
+            objectArray = list;
+            Console.WriteLine(list);
+            return list;
+        }
+
+        public Object deserializeObject(int objectIdentifier, string objectType)
+        {
+            createFile();
             Object objectToReturn = null;
+            objectArray = deserializeArray();
             try
             {
-                while (stream.CanSeek)
+                for (int i = 0; i < objectArray.Count; i++)
                 {
-                    objectFromStream = (Object)bformatter.Deserialize(stream);
-
-                    if(objectFromStream is Customer) {
-                        Customer customer = (Customer)objectFromStream;
-                        if (customer.CustomerReferenceNumber == objectIdentifier) {
-                            objectToReturn = customer;
+                    if (objectType == "customer")
+                    {
+                        if (objectArray[i] is Customer)
+                        {
+                            Customer customer = (Customer)objectArray[i];
+                            if (customer.CustomerReferenceNumber == objectIdentifier)
+                            {
+                                objectToReturn = customer;
+                                break;
+                            }
                         }
                     }
 
-                    else if (objectFromStream is Booking) {
-                        Booking booking = (Booking)objectFromStream;
-                        if (booking.BookingReferenceNumber == objectIdentifier) {
-                            objectToReturn = booking;
+                    if (objectType == "booking")
+                    {
+                        if (objectArray[i] is Booking)
+                        {
+                            Booking booking = (Booking)objectArray[i];
+                            if (booking.BookingReferenceNumber == objectIdentifier)
+                            {
+                                objectToReturn = booking;
+                                break;
+                            }
                         }
                     }
 
-                    else if (objectFromStream is Guest) {
-                        Guest guest = (Guest)objectFromStream;
-                        if (guest.PassportNumber == objectIdentifier) {
-                            objectToReturn = guest;
+                    if (objectType == "guest")
+                    {
+                        if (objectArray[i] is Guest)
+                        {
+                            Guest guest = (Guest)objectArray[i];
+                            if (guest.PassportNumber == objectIdentifier)
+                            {
+                                objectToReturn = guest;
+                                break;
+                            }
                         }
                     }
                 }
             }
-            catch(SerializationException ex)
+
+            catch(SerializationException e)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(e);
             }
-            closeStream();
+            
             return objectToReturn;
+        }
+        public void deleteObject(int objectIdentifier, string objectType)
+        {
+            createFile();
+            deserializeArray();
+            for (int i = 0; i < objectArray.Count; i++)
+            {
+                if (objectType == "customer" && objectArray[i] is Customer) {
+                    Customer objectToCheck = (Customer) objectArray[i];
+                    if (objectToCheck.CustomerReferenceNumber == objectIdentifier)
+                    {
+                        objectArray.RemoveAt(i);
+                        break;
+                    }
+                }
+                if (objectType == "booking" && objectArray[i] is Booking)
+                {
+                    Booking objectToCheck = (Booking)objectArray[i];
+                    if (objectToCheck.BookingReferenceNumber == objectIdentifier)
+                    {
+                        objectArray.RemoveAt(i);
+                        break;
+                    }
+                }
+                if (objectType == "guest" && objectArray[i] is Guest)
+                {
+                    Guest objectToCheck = (Guest)objectArray[i];
+                    if (objectToCheck.PassportNumber == objectIdentifier)
+                    {
+                        objectArray.RemoveAt(i);
+                        break;
+                    }
+                }
+            }
+            stream = File.Open(txtFileName, FileMode.Create);
+            bformatter.Serialize(stream, objectArray);
+            closeStream();
         }
 
         public void closeStream()

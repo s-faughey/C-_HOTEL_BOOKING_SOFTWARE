@@ -34,5 +34,35 @@ namespace assessment2
                 this.passportNumber = value;
             }
         }
+
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                if (value == null) {
+                    throw new Exception("This is wrong");
+                }
+                this.name = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return this.age;
+            }
+            set
+            {
+                if (value == null) {
+                    throw new Exception("This is wrong");
+                }
+                this.age = value;
+            }
+        }
     }
 }
