@@ -57,9 +57,24 @@ namespace assessment2
             return guest;
         }
 
-        public void deleteObject(int objectIdentifier, string objectType)
+        public bool deleteObject(int objectIdentifier, string objectType)
         {
-            serializer.deleteObject(objectIdentifier, objectType);
+            return serializer.deleteObject(objectIdentifier, objectType);
+        }
+
+        public void amendCustomer(int objectIdentifier, string objectType, string name, string address)
+        {
+            serializer.amendCustomer(objectIdentifier, name, address);
+        }
+
+        public void amendBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
+        {
+            serializer.amendBooking(arrivalDate, departureDate, bookingReferenceNumber, eveningMeals, breakfast, carHire);
+        }
+
+        public void amendGuest(string name, int age, int passportNumber)
+        {
+            serializer.amendGuest(name, age, passportNumber);
         }
 
         public void writeToFile(Object item)

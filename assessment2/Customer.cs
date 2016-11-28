@@ -60,7 +60,7 @@ namespace assessment2
                 if (value == null) {
                     throw new Exception("This is wrong.");
                 }
-                this.address = value;
+                this.name = value;
             }
         }
     }

@@ -144,10 +144,11 @@ namespace assessment2
             
             return objectToReturn;
         }
-        public void deleteObject(int objectIdentifier, string objectType)
+        public bool deleteObject(int objectIdentifier, string objectType)
         {
             createFile();
             deserializeArray();
+            bool foundObject = false;
             for (int i = 0; i < objectArray.Count; i++)
             {
                 if (objectType == "customer" && objectArray[i] is Customer) {
@@ -155,6 +156,7 @@ namespace assessment2
                     if (objectToCheck.CustomerReferenceNumber == objectIdentifier)
                     {
                         objectArray.RemoveAt(i);
+                        foundObject = true;
                         break;
                     }
                 }
@@ -164,6 +166,7 @@ namespace assessment2
                     if (objectToCheck.BookingReferenceNumber == objectIdentifier)
                     {
                         objectArray.RemoveAt(i);
+                        foundObject =  true;
                         break;
                     }
                 }
@@ -173,6 +176,7 @@ namespace assessment2
                     if (objectToCheck.PassportNumber == objectIdentifier)
                     {
                         objectArray.RemoveAt(i);
+                        foundObject =  true;
                         break;
                     }
                 }
@@ -180,6 +184,73 @@ namespace assessment2
             stream = File.Open(txtFileName, FileMode.Create);
             bformatter.Serialize(stream, objectArray);
             closeStream();
+            return foundObject;
+        }
+
+        public void amendCustomer(int objectIdentifier, string name, string address)
+        {
+            ArrayList objectArray = deserializeArray();
+            for (int i = 0; i < objectArray.Count; i++)
+            {
+                if (objectArray[i] is Customer)
+                {
+                    Customer objectToCheck = (Customer)objectArray[i];
+                    if (objectToCheck.CustomerReferenceNumber == objectIdentifier)
+                    {
+                        objectToCheck.Name = name;
+                        objectToCheck.Address = address;
+                        using (var stream = File.OpenWrite(txtFileName))
+                        {
+                            bformatter.Serialize(stream, objectArray);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void amendBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
+        {
+            ArrayList objectArray = deserializeArray();
+            for (int i = 0; i < objectArray.Count; i++)
+            {
+                if (objectArray[i] is Booking)
+                {
+                    Booking objectToCheck = (Booking)objectArray[i];
+                    if (objectToCheck.BookingReferenceNumber == bookingReferenceNumber)
+                    {
+                        objectToCheck.ArrivalDate = arrivalDate;
+                        objectToCheck.DepartureDate = departureDate;
+                        objectToCheck.EveningMeals = eveningMeals;
+                        objectToCheck.Breakfast = breakfast;
+                        objectToCheck.CarHire = carHire;
+                        using (var stream = File.OpenWrite(txtFileName))
+                        {
+                            bformatter.Serialize(stream, objectArray);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void amendGuest(string name, int age, int objectIdentifier)
+        {
+            ArrayList objectArray = deserializeArray();
+            for (int i = 0; i < objectArray.Count; i++)
+            {
+                if (objectArray[i] is Guest)
+                {
+                    Guest objectToCheck = (Guest)objectArray[i];
+                    if (objectToCheck.PassportNumber == objectIdentifier)
+                    {
+                        objectToCheck.Name = name;
+                        objectToCheck.Age = age;
+                        using (var stream = File.OpenWrite(txtFileName))
+                        {
+                            bformatter.Serialize(stream, objectArray);
+                        }
+                    }
+                }
+            }
         }
 
         public void closeStream()

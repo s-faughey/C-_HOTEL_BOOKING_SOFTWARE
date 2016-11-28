@@ -70,7 +70,7 @@ namespace assessment2
                 {
                     throw new Exception("This is wrong");
                 }
-                this.arrivalDate = value;
+                this.departureDate = value;
             }
         }
 
@@ -115,7 +115,7 @@ namespace assessment2
                 if (value == null) {
                     throw new Exception("wrong");
                 }
-                this.carHire = value;
+                this.eveningMeals = value;
             }
         }
     }
