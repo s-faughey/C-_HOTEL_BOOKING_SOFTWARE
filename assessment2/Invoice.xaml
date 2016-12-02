@@ -1,0 +1,20 @@
+﻿<Window x:Class="assessment2.Invoice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:assessment2"
+        mc:Ignorable="d"
+        Title="Invoice" Height="300" Width="300">
+    <Grid>
+        <TextBlock x:Name="TextBlockBookingReferenceNumber" HorizontalAlignment="Left" Height="22" Margin="26,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"><Run Text="Booking Reference Number: "/><InlineUIContainer>
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap"/>
+            </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="textBlockCostPerNight" HorizontalAlignment="Left" Margin="26,115,0,0" TextWrapping="Wrap" Text="Cost per night: " VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockExtrasCost" HorizontalAlignment="Left" Height="23" Margin="26,187,0,0" TextWrapping="Wrap" Text="Extras Cost: " VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="tbBookingReferenceNumber" HorizontalAlignment="Left" Height="23" Margin="201,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="tbCostPerNight" HorizontalAlignment="Left" Height="23" Margin="201,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+        <TextBlock x:Name="tbExtrasCost" HorizontalAlignment="Left" Height="23" Margin="201,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81"/>
+
+    </Grid>
+</Window>

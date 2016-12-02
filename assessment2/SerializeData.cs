@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace assessment2
 {
-    class SerializeData
+    public class SerializeData
     {
         FileStream stream = null;
         BinaryFormatter bformatter = null;
@@ -22,7 +22,7 @@ namespace assessment2
             bformatter = new BinaryFormatter();
         }
 
-        private void createFile()
+        public void createFile()
         {
             if (!File.Exists(txtFileName)) {
                 stream = File.Open(txtFileName, FileMode.Create);
@@ -87,7 +87,7 @@ namespace assessment2
             return list;
         }
 
-        public Object deserializeObject(int objectIdentifier, string objectType)
+        public Object deserializeObject(int objectIdentifier, string objectType, string passportNumber)
         {
             createFile();
             Object objectToReturn = null;
@@ -127,7 +127,7 @@ namespace assessment2
                         if (objectArray[i] is Guest)
                         {
                             Guest guest = (Guest)objectArray[i];
-                            if (guest.PassportNumber == objectIdentifier)
+                            if (guest.PassportNumber == passportNumber)
                             {
                                 objectToReturn = guest;
                                 break;
@@ -144,7 +144,8 @@ namespace assessment2
             
             return objectToReturn;
         }
-        public bool deleteObject(int objectIdentifier, string objectType)
+
+        public bool deleteObject(int objectIdentifier, string objectType, string passportNumber)
         {
             createFile();
             deserializeArray();
@@ -173,7 +174,7 @@ namespace assessment2
                 if (objectType == "guest" && objectArray[i] is Guest)
                 {
                     Guest objectToCheck = (Guest)objectArray[i];
-                    if (objectToCheck.PassportNumber == objectIdentifier)
+                    if (objectToCheck.PassportNumber == passportNumber)
                     {
                         objectArray.RemoveAt(i);
                         foundObject =  true;
@@ -208,7 +209,7 @@ namespace assessment2
             }
         }
 
-        public void amendBooking(string arrivalDate, string departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire)
+        public void amendBooking(DateTime arrivalDate, DateTime departureDate, int bookingReferenceNumber, bool eveningMeals, bool breakfast, bool carHire, string eveningDiet, string breakfastDiet, DateTime from, DateTime until, int customerReferenceNumber, string passportNumber, string driver)
         {
             ArrayList objectArray = deserializeArray();
             for (int i = 0; i < objectArray.Count; i++)
@@ -223,6 +224,36 @@ namespace assessment2
                         objectToCheck.EveningMeals = eveningMeals;
                         objectToCheck.Breakfast = breakfast;
                         objectToCheck.CarHire = carHire;
+                        objectToCheck.EveningDietaryRequirements = eveningDiet;
+                        objectToCheck.BreakfastDietaryRequirements = breakfastDiet;
+                        objectToCheck.CarHireStart = from;
+                        objectToCheck.CarHireEnd = until;
+                        objectToCheck.Driver = driver;
+                        if (customerReferenceNumber != 0)
+                        {
+                            objectToCheck.CustomerReferenceNumber = customerReferenceNumber;
+                        }
+                        if (passportNumber != "")
+                        {
+                            if (objectToCheck.GuestArray.Count == 0) {
+                                objectToCheck.GuestArray.Add(passportNumber);
+                            }
+                            else
+                            {
+                                bool foundIt = false;
+                                for (int count = 0; count < objectToCheck.GuestArray.Count; count++)
+                                {
+                                    if (objectToCheck.GuestArray[count] == passportNumber)
+                                    {
+                                        foundIt = true;
+                                    }
+                                }
+                                if (!foundIt)
+                                {
+                                    objectToCheck.GuestArray.Add(passportNumber);
+                                }
+                            }
+                        }
                         using (var stream = File.OpenWrite(txtFileName))
                         {
                             bformatter.Serialize(stream, objectArray);
@@ -232,7 +263,7 @@ namespace assessment2
             }
         }
 
-        public void amendGuest(string name, int age, int objectIdentifier)
+        public void amendGuest(string name, int age, string objectIdentifier)
         {
             ArrayList objectArray = deserializeArray();
             for (int i = 0; i < objectArray.Count; i++)

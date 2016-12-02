@@ -1,7 +1,7 @@
 ﻿<Window x:Class="assessment2.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Napier Holiday Village" Height="527" Width="530">
+        Title="Napier Holiday Village" Height="662" Width="530">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -12,38 +12,48 @@
         <TextBlock x:Name="CustomerAddressBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="22" Margin="10,72,0,0" TextWrapping="Wrap" Text="Address" VerticalAlignment="Top" Width="75"/>
         <TextBlock x:Name="CRNBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,101,0,0" TextWrapping="Wrap" Text="Customer Reference Number" VerticalAlignment="Top" Width="162"/>
         <TextBlock x:Name="BookingBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="34" Margin="236,128,0,0" TextWrapping="Wrap" Text="Booking" VerticalAlignment="Top" Width="147"/>
-        <TextBlock x:Name="ArrivalDateBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,162,0,0" TextWrapping="Wrap" Text="Arrival Date" VerticalAlignment="Top" Width="141"/>
-        <TextBlock x:Name="DepartureDateBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,191,0,0" TextWrapping="Wrap" Text="Departure Date" VerticalAlignment="Top" Width="141"/>
+        <TextBlock x:Name="ArrivalDateBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,162,0,0" TextWrapping="Wrap" Text="Arrival Date (dd/mm/yyyy)" VerticalAlignment="Top" Width="141"/>
+        <TextBlock x:Name="DepartureDateBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,191,0,0" TextWrapping="Wrap" Text="Departure Date (dd/mm/yyyy)" VerticalAlignment="Top" Width="162"/>
         <TextBlock x:Name="BRNBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,220,0,0" TextWrapping="Wrap" Text="Booking Reference Number" VerticalAlignment="Top" Width="153"/>
         <CheckBox x:Name="cbEveningMeals" Grid.ColumnSpan="2" Content="Evening Meals" HorizontalAlignment="Left" Height="23" Margin="86,270,0,0" VerticalAlignment="Top" Width="133"/>
         <CheckBox x:Name="cbBreakfast" Grid.ColumnSpan="2" Content="Breakfast" HorizontalAlignment="Left" Height="23" Margin="224,270,0,0" VerticalAlignment="Top" Width="133"/>
         <CheckBox x:Name="cbCarHire" Grid.ColumnSpan="2" Content="Car Hire" HorizontalAlignment="Left" Height="23" Margin="362,270,0,0" VerticalAlignment="Top" Width="133"/>
-        <TextBlock x:Name="GuestBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="28" Margin="236,298,0,0" TextWrapping="Wrap" Text="Guest" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="GuestNameBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,331,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="87"/>
-        <TextBlock x:Name="PassportNumberBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,360,0,0" TextWrapping="Wrap" Text="Passport Number" VerticalAlignment="Top" Width="98"/>
-        <TextBlock x:Name="AgeBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,389,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="162"/>
-        <Button x:Name="btnAddCustomer" Grid.ColumnSpan="2" Content="Add Customer" HorizontalAlignment="Left" Height="30" Margin="10,428,0,0" VerticalAlignment="Top" Width="80" Click="btnAddCustomer_Click"/>
-        <Button x:Name="btnAddBooking" Grid.ColumnSpan="2" Content="Add Booking" HorizontalAlignment="Left" Height="30" Margin="95,428,0,0" VerticalAlignment="Top" Width="80" Click="btnAddBooking_Click"/>
-        <Button x:Name="btnAddGuest" Grid.ColumnSpan="2" Content="Add Guest" HorizontalAlignment="Left" Height="30" Margin="180,428,0,0" VerticalAlignment="Top" Width="80" Click="btnAddGuest_Click"/>
-        <Button x:Name="btnInvoice" Grid.ColumnSpan="2" Content="Invoice" HorizontalAlignment="Left" Height="30" Margin="415,354,0,0" VerticalAlignment="Top" Width="80"/>
-        <Button x:Name="btnDeleteCustomer" Grid.ColumnSpan="2" Content="Delete Customer" HorizontalAlignment="Left" Height="30" Margin="265,428,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteCustomer_Click"/>
-        <Button x:Name="btnDeleteBooking" Grid.ColumnSpan="2" Content="Delete Booking" HorizontalAlignment="Left" Height="30" Margin="350,428,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteBooking_Click"/>
-        <Button x:Name="btnAmendCustomer" Grid.ColumnSpan="2" Content="Amend Customer" HorizontalAlignment="Left" Height="30" Margin="10,463,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendCustomer_Click"/>
-        <Button x:Name="btnAmendGuest" Grid.ColumnSpan="2" Content="Amend Guest" HorizontalAlignment="Left" Height="30" Margin="180,463,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendGuest_Click"/>
-        <Button x:Name="btnAmendBooking" Grid.ColumnSpan="2" Content="Amend Booking" HorizontalAlignment="Left" Height="30" Margin="95,463,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendBooking_Click"/>
+        <TextBlock x:Name="GuestBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="28" Margin="236,428,0,0" TextWrapping="Wrap" Text="Guest" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="GuestNameBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,461,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="87"/>
+        <TextBlock x:Name="PassportNumberBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,490,0,0" TextWrapping="Wrap" Text="Passport Number" VerticalAlignment="Top" Width="98"/>
+        <TextBlock x:Name="AgeBlock" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="10,519,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="162"/>
+        <Button x:Name="btnAddCustomer" Grid.ColumnSpan="2" Content="Add Customer" HorizontalAlignment="Left" Height="30" Margin="10,558,0,0" VerticalAlignment="Top" Width="80" Click="btnAddCustomer_Click"/>
+        <Button x:Name="btnAddBooking" Grid.ColumnSpan="2" Content="Add Booking" HorizontalAlignment="Left" Height="30" Margin="95,558,0,0" VerticalAlignment="Top" Width="80" Click="btnAddBooking_Click"/>
+        <Button x:Name="btnAddGuest" Grid.ColumnSpan="2" Content="Add Guest" HorizontalAlignment="Left" Height="30" Margin="180,558,0,0" VerticalAlignment="Top" Width="80" Click="btnAddGuest_Click"/>
+        <Button x:Name="btnInvoice" Grid.ColumnSpan="2" Content="Invoice" HorizontalAlignment="Left" Height="30" Margin="415,484,0,0" VerticalAlignment="Top" Width="80" Click="btnInvoice_Click"/>
+        <Button x:Name="btnDeleteCustomer" Grid.ColumnSpan="2" Content="Delete Customer" HorizontalAlignment="Left" Height="30" Margin="265,558,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteCustomer_Click"/>
+        <Button x:Name="btnDeleteBooking" Grid.ColumnSpan="2" Content="Delete Booking" HorizontalAlignment="Left" Height="30" Margin="350,558,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteBooking_Click"/>
+        <Button x:Name="btnAmendCustomer" Grid.ColumnSpan="2" Content="Amend Customer" HorizontalAlignment="Left" Height="30" Margin="10,593,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendCustomer_Click"/>
+        <Button x:Name="btnAmendGuest" Grid.ColumnSpan="2" Content="Amend Guest" HorizontalAlignment="Left" Height="30" Margin="180,593,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendGuest_Click"/>
+        <Button x:Name="btnAmendBooking" Grid.ColumnSpan="2" Content="Amend Booking" HorizontalAlignment="Left" Height="30" Margin="95,593,0,0" VerticalAlignment="Top" Width="80" Click="btnAmendBooking_Click"/>
         <TextBox x:Name="tbCustomerName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="180,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbCustomerAddress" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="180,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbCustomerReferenceNumber" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="180,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbArrivalDate" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="180,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbDepartureDate" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="21" Margin="180,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
-        <TextBox x:Name="tbGuestName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
-        <TextBox x:Name="tbPassportNumber" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
-        <TextBox x:Name="tbAge" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
+        <TextBox x:Name="tbGuestName" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
+        <TextBox x:Name="tbPassportNumber" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,487,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
+        <TextBox x:Name="tbAge" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="24" Margin="117,516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
         <TextBox x:Name="tbBookingReferenceNumber" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="21" Margin="180,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266"/>
-        <Button x:Name="btnReadCustomer" Grid.ColumnSpan="2" Content="Read Customer" HorizontalAlignment="Left" Height="30" Margin="265,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadCustomer_Click"/>
-        <Button x:Name="btnReadGuest" Grid.ColumnSpan="2" Content="Read Guest" HorizontalAlignment="Left" Height="30" Margin="435,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadGuest_Click"/>
-        <Button x:Name="btnReadBooking" Grid.ColumnSpan="2" Content="Read Booking" HorizontalAlignment="Left" Height="30" Margin="350,463,0,0" VerticalAlignment="Top" Width="80" Click="btnReadBooking_Click"/>
-        <Button x:Name="btnDeleteGuest" Grid.ColumnSpan="2" Content="Delete Guest" HorizontalAlignment="Left" Height="30" Margin="435,428,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteGuest_Click"/>
+        <Button x:Name="btnReadCustomer" Grid.ColumnSpan="2" Content="Read Customer" HorizontalAlignment="Left" Height="30" Margin="265,593,0,0" VerticalAlignment="Top" Width="80" Click="btnReadCustomer_Click"/>
+        <Button x:Name="btnReadGuest" Grid.ColumnSpan="2" Content="Read Guest" HorizontalAlignment="Left" Height="30" Margin="435,593,0,0" VerticalAlignment="Top" Width="80" Click="btnReadGuest_Click"/>
+        <Button x:Name="btnReadBooking" Grid.ColumnSpan="2" Content="Read Booking" HorizontalAlignment="Left" Height="30" Margin="350,593,0,0" VerticalAlignment="Top" Width="80" Click="btnReadBooking_Click"/>
+        <Button x:Name="btnDeleteGuest" Grid.ColumnSpan="2" Content="Delete Guest" HorizontalAlignment="Left" Height="30" Margin="435,558,0,0" VerticalAlignment="Top" Width="80" Click="btnDeleteGuest_Click"/>
+        <TextBox x:Name="tbDietaryRequirements" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="10,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="textBlockDietaryRequirements" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="10,298,0,0" TextWrapping="Wrap" Text="Dietary requirements:" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="tbDietaryRequirements_Breakfast" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="60" Margin="192,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="textBlockDietaryRequirements_Breakfast" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="192,298,0,0" TextWrapping="Wrap" Text="Dietary requirements:" VerticalAlignment="Top" Width="165"/>
+        <TextBlock x:Name="textBoxFrom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="372,298,0,0" TextWrapping="Wrap" Text="From: (dd/mm/yyyy)" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="textBlockUntil" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="372,343,0,0" TextWrapping="Wrap" Text="Until: (dd/mm/yyyy)" VerticalAlignment="Top" Width="123"/>
+        <TextBlock x:Name="textBlockNameOfDriver" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="372,395,0,0" TextWrapping="Wrap" Text="Name of driver:" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="tbFrom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="372,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="tbUntil" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="372,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="tbDriver" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="29" Margin="372,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
 
     </Grid>
 </Window>

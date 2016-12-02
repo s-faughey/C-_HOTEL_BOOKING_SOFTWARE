@@ -95,8 +95,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="af21ef6d-3113-40ee-afe0-1be6a1d20c42"
-                LastKnownName="Date"
+                Id="75c761bb-a04a-46d2-81f3-849cf5d06efe"
+                LastKnownName="DateTime"
                 LastKnownLocation="assessment2diagram.uml" />
             </type_NamedElement>
           </property>
@@ -113,8 +113,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="af21ef6d-3113-40ee-afe0-1be6a1d20c42"
-                LastKnownName="Date"
+                Id="75c761bb-a04a-46d2-81f3-849cf5d06efe"
+                LastKnownName="DateTime"
                 LastKnownLocation="assessment2diagram.uml" />
             </type_NamedElement>
           </property>
@@ -133,6 +133,186 @@
               <undefinedTypeMoniker
                 Id="f4ae6d70-a90b-44e6-bced-577edca63d82"
                 LastKnownName="int"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8a90aa68-5d03-4328-a1f3-fe7077f090ad"
+            name="customerReferenceNumber"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="f4ae6d70-a90b-44e6-bced-577edca63d82"
+                LastKnownName="int"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9d97ff87-8024-41e1-a728-eafd97a65909"
+            name="eveningMeals"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c0094fc7-960a-4d09-bb7a-63587b993ce1"
+                LastKnownName="bool"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="70853672-9c88-489d-95bb-d58e4f588051"
+            name="breakfast"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c0094fc7-960a-4d09-bb7a-63587b993ce1"
+                LastKnownName="bool"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fc4e4696-3fee-4535-8897-dd1e8f5d01e0"
+            name="carHire"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c0094fc7-960a-4d09-bb7a-63587b993ce1"
+                LastKnownName="bool"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e8db79b8-cc3f-43d0-9236-5eecd1ee1d3d"
+            name="eveningDietaryRequirements"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ead5a1c4-8a64-4c63-a831-f82480340f7e"
+                LastKnownName="string"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7e1caf80-bc76-42ae-af68-a89b92da98a9"
+            name="breakfastDietaryRequirements"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ead5a1c4-8a64-4c63-a831-f82480340f7e"
+                LastKnownName="string"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="284aa5a6-53e6-411c-a8c2-e19028c48ce1"
+            name="carHireStart"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="75c761bb-a04a-46d2-81f3-849cf5d06efe"
+                LastKnownName="DateTime"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c82a1a62-bf4e-4b2f-ae09-9917aa5d43c0"
+            name="carHireEnd"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="75c761bb-a04a-46d2-81f3-849cf5d06efe"
+                LastKnownName="DateTime"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dc0962ef-97c0-4890-95dc-52af0c9a035c"
+            name="driver"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ead5a1c4-8a64-4c63-a831-f82480340f7e"
+                LastKnownName="string"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f508ab13-9853-46de-95bf-d92e7a523bd8"
+            name="guestArray"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="307220fb-9dc0-491f-b365-6c6b715ff32d"
+                LastKnownName="List&lt;String&gt;"
                 LastKnownLocation="assessment2diagram.uml" />
             </type_NamedElement>
           </property>
@@ -325,8 +505,8 @@
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="f4ae6d70-a90b-44e6-bced-577edca63d82"
-                LastKnownName="int"
+                Id="ead5a1c4-8a64-4c63-a831-f82480340f7e"
+                LastKnownName="string"
                 LastKnownLocation="assessment2diagram.uml" />
             </type_NamedElement>
           </property>
@@ -358,6 +538,80 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="2184e78e-f1c8-43f7-acda-24fba0672d89"
+            name="customerFactory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="945b3a57-6e1c-45a9-b357-f794323ada52"
+                LastKnownName="CustomerFactory"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4c65cfd3-b076-4c4a-9865-9e79bf772da8"
+            name="bookingFactory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="31dbdc65-7e17-4609-b93b-a39ba94ff24f"
+                LastKnownName="BookingFactory"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="769fd2d5-6579-4c49-b25e-5a3480c00fe2"
+            name="guestFactory"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="eeb57c96-56c4-4806-b87d-c861f0b62e1d"
+                LastKnownName="GuestFactory"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2b93d52c-c1dd-40bb-9b88-38f6acc453ee"
+            name="serializer"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="82db668a-7766-4d4b-a0d1-a0f10e0d6afa"
+                LastKnownName="SerializeData"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="a66bc036-0696-4a3c-9916-f76d6740922a"
@@ -378,6 +632,62 @@
           <operation
             Id="ac15ae82-ee6a-4bc0-8807-bcadac539ee2"
             name="createGuest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4386974a-a01a-46b0-bbe4-9d2f9417ce99"
+            name="readCustomer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="350a0661-1618-4aef-9ee1-f66899ab1401"
+            name="readGuest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="96a897bc-74a4-4b85-a0a0-8d2c5b9da740"
+            name="deleteObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c0f7ca75-4643-4a58-a84a-b19603eab7b5"
+            name="amendCustomer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3517c39e-6a65-4d5d-86c3-f3b03bc43661"
+            name="amendBooking"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="26ca559f-0632-49f1-8c8b-806c2726a042"
+            name="amendGuest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="15226ebd-3d49-40da-8cd4-a66efa1d92ac"
+            name="createInvoice"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -484,6 +794,16 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="acfe3cb9-ccd6-4b77-913f-9d14ebebf563"
+            name="createCustomer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -534,6 +854,16 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="91167dac-170e-4ecf-9282-de7212d3b2b3"
+            name="createBooking"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -584,6 +914,16 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="f5bee9fd-4c9f-4d1b-85b7-f5c6e69a7926"
+            name="createGuest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -634,6 +974,80 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="cfe17202-3753-4add-a871-56bafef42736"
+            name="stream"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="e302367a-c21a-4842-9fbc-8396f741d78b"
+                LastKnownName="FileStream"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ff5bd9f9-ff83-450a-8ec5-3a6e3c8cfbc3"
+            name="bformatter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6e989ea0-274d-459a-9d1c-857acbf9611a"
+                LastKnownName="BinaryFormatter"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e7586c67-1261-4756-ba55-82aaf17fd439"
+            name="txtFileName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ead5a1c4-8a64-4c63-a831-f82480340f7e"
+                LastKnownName="string"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="58ea48e8-ce8a-469d-9008-ed13ea84f405"
+            name="objectArray"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8006412e-46ef-47aa-ae25-0d7b19e9b566"
+                LastKnownName="ArrayList"
+                LastKnownLocation="assessment2diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="992319f3-514d-4b4b-a0b1-50000f6a6594"
@@ -645,7 +1059,7 @@
             isQuery="false" />
           <operation
             Id="866c82ff-1d22-48c0-9b87-fcaa526170ef"
-            name="DeserializeObjects"
+            name="DeserializeObject"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -659,8 +1073,86 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="67028616-7b58-471f-9c46-5797645738ec"
+            name="createFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="37fee2a6-1509-466c-99f4-5cc0b638c2be"
+            name="findFirstAvailableNumber"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bb1843a6-a779-4318-b939-0f23f77e9f0c"
+            name="deleteObject"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7a2a8e6f-4aae-4f2f-a655-4c31b3816f25"
+            name="amendCustomer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5a2186e0-8a8d-4d39-b34c-3f05252a9093"
+            name="amendBooking"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5ff78816-4a97-4fe4-8989-b73d8f03da7f"
+            name="amendGuest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="75c761bb-a04a-46d2-81f3-849cf5d06efe"
+        name="DateTime" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c0094fc7-960a-4d09-bb7a-63587b993ce1"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="307220fb-9dc0-491f-b365-6c6b715ff32d"
+        name="List&lt;String&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e302367a-c21a-4842-9fbc-8396f741d78b"
+        name="FileStream" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6e989ea0-274d-459a-9d1c-857acbf9611a"
+        name="BinaryFormatter" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8006412e-46ef-47aa-ae25-0d7b19e9b566"
+        name="ArrayList" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

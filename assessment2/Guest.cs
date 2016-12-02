@@ -11,15 +11,15 @@ namespace assessment2
     {
         private int age;
         private string name;
-        private int passportNumber;
-        public Guest(int age, string name, int passportNumber)
+        private string passportNumber;
+        public Guest(string name, string passportNumber, int age)
         {
             this.age = age;
             this.name = name;
             this.passportNumber = passportNumber;
         }
 
-        public int PassportNumber
+        public string PassportNumber
         {
             get
             {

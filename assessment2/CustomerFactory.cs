@@ -13,15 +13,5 @@ namespace assessment2
             Customer customer = new Customer(name, address, customerReferenceNumber);
             return customer;
         }
-
-        public void deleteCustomer()
-        {
-
-        }
-
-        public void amendCustomer()
-        {
-
-        }
     }
 }
