@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+//Author name: Sean Faughey
+//Description: This class deals with the GUI for the Invoice window
+//Last modified: 06/12/2016
 namespace assessment2
 {
     /// <summary>
@@ -19,15 +21,15 @@ namespace assessment2
     /// </summary>
     public partial class Invoice : Window
     {
-        private Booking booking;
-        public Invoice(Booking booking, SerializeData serializer)
+        private Booking booking;    //a booking object to be displayed on screen
+        public Invoice(Booking booking, SerializeData serializer) //a constructor
         {
             InitializeComponent();
             this.booking = booking;
-            InvoiceBooking invoice = new InvoiceBooking(booking, serializer);
-            tbBookingReferenceNumber.Text = booking.BookingReferenceNumber.ToString();
-            tbCostPerNight.Text = invoice.basicCost().ToString();
-            tbExtrasCost.Text = invoice.extrasCost().ToString();
+            InvoiceBooking invoice = new InvoiceBooking(booking, serializer); //create a new invoicebooking object which deals with calculations
+            tbBookingReferenceNumber.Text = booking.BookingReferenceNumber.ToString(); //show the booking reference number on screen
+            tbCostPerNight.Text = invoice.basicCost().ToString(); //show the cost per night
+            tbExtrasCost.Text = invoice.extrasCost().ToString(); //show the extras cost
         }
     }
 }

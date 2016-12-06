@@ -66,3 +66,6 @@ E:\assessment2\assessment2\obj\Debug\assessment2.pdb
 F:\assessment2\assessment2\obj\Debug\Invoice.g.cs
 F:\assessment2\assessment2\obj\Debug\assessment2_MarkupCompile.lref
 F:\assessment2\assessment2\obj\Debug\Invoice.baml
+E:\assessment2\assessment2\obj\Debug\Invoice.g.cs
+E:\assessment2\assessment2\obj\Debug\assessment2_MarkupCompile.lref
+E:\assessment2\assessment2\obj\Debug\Invoice.baml
